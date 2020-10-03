@@ -4,6 +4,9 @@
 // e.g. letterCount(["crisp", "bacon"]) returns 10
 
 const letterCount = (arr) => {
+  let string1 = arr.join("") 
+let count1 = string1.length
+return count1
   // Insert missing solution please
 };
 
