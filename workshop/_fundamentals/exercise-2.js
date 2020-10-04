@@ -6,7 +6,11 @@
 // - if any of the values in either array is not strings, return undefined.
 
 const combineArrays = (arr1, arr2) => {
-  // Insert missing solution please
+  // Insert missing solution pleaseconst combineArrays = (arr1, arr2) => {
+let array = (arr1 + "," + arr2)
+let split = array.split(",")
+return split.sort()
+};
 };
 
 // 2. Do a console.log to verify your function.
