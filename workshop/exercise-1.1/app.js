@@ -1,17 +1,30 @@
 // Exercise 1.1
 // ------------
 let body = document.querySelector("body")
-let h1 = document.querySelector("h1")
-let p = document.querySelector("p")
-
 let title = document.createElement("h1")
-let output = document.createElement ("p")
+let message = document.createElement("p")
+let subtitle = document.createElement("h2")
+
 
 title.innerText = "Be a quicker clicker!"
 
+
+body.addEventListener("click", event => {
+window.clearTimeout(timeoutID)
+console.log("exercise-1.1");
+body.appendChild(message)
+message.innerText = "You Win!";
+}); 
+
+
+let timeoutID
+let timer = () => {
+timeoutID = window.setTimeout(window.alert, 1000, 'You Lost!'); 
+body.removeEventListener("click")
+
+}
+
 body.appendChild(title)
-body.appendChild(paragrapheOne)
-body.appendChild(h2)
+body.appendChild(message)
+body.appendChild(subtitle)
 
-
-console.log('exercise 1.1');
